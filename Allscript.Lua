@@ -5,7 +5,7 @@ screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 -- إنشاء الإطار الرئيسي
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 320, 0, 270) -- زيادة الارتفاع لاستيعاب الزر الجديد
-frame.Position = UDim2.new(0.5, -160, 0.5, -135)
+frame.Position = UDim2.new(0.8, -160, 0.9, -135)
 frame.AnchorPoint = Vector2.new(0.5, 0.5)
 frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 frame.Parent = screenGui
@@ -188,9 +188,9 @@ end)
 -- إنشاء زر Legend of Speed
 local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
-legendButton.Text = "سكربت  amoluff"
-legendButton.TextColor3 = Color3.new(1, 1, 1)
-legendButton.BackgroundColor3 = Color3.new(0, 1, 0) -- لون أزرق فاتح
+legendButton.Text = "سكربت عربي AMOLUFF"
+legendButton.TextColor3 = Color3.new(1, 0, 0)
+legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
 
 -- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
@@ -208,7 +208,7 @@ local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
 legendButton.Text = "brookhaven"
 legendButton.TextColor3 = Color3.new(1, 1, 1)
-legendButton.BackgroundColor3 = Color3.new(1, 0, 0) -- لون أزرق فاتح
+legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
 
 -- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)

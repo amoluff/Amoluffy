@@ -22,7 +22,7 @@ local dragStart = nil
 local startPos = nil
 
 openButton.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         dragging = true
         dragStart = input.Position
         startPos = openButton.Position
@@ -36,7 +36,7 @@ openButton.InputBegan:Connect(function(input)
 end)
 
 openButton.InputChanged:Connect(function(input)
-    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
         local delta = input.Position - dragStart
         openButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
     end
@@ -56,7 +56,7 @@ local menuDragStart = nil
 local menuStartPos = nil
 
 menuFrame.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         menuDragging = true
         menuDragStart = input.Position
         menuStartPos = menuFrame.Position
@@ -70,7 +70,7 @@ menuFrame.InputBegan:Connect(function(input)
 end)
 
 menuFrame.InputChanged:Connect(function(input)
-    if menuDragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+    if menuDragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
         local delta = input.Position - menuDragStart
         menuFrame.Position = UDim2.new(menuStartPos.X.Scale, menuStartPos.X.Offset + delta.X, menuStartPos.Y.Scale, menuStartPos.Y.Offset + delta.Y)
     end
@@ -92,31 +92,6 @@ scriptsButton.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
 scriptsButton.Text = "السكربتات"
 scriptsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 scriptsButton.Parent = menuFrame
-
--- قائمة السكربتات
-local scriptsFrame = Instance.new("Frame")
-scriptsFrame.Size = UDim2.new(0, 250, 0, 150)
-scriptsFrame.Position = UDim2.new(0.5, -125, 0.5, -75)
-scriptsFrame.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-scriptsFrame.Visible = false
-scriptsFrame.Parent = screenGui
-
--- زر Fly في قائمة السكربتات
-local flyButton = Instance.new("TextButton")
-flyButton.Size = UDim2.new(0, 100, 0, 30)
-flyButton.Position = UDim2.new(0.5, -50, 0.5, -15)
-flyButton.BackgroundColor3 = Color3.fromRGB(255, 165, 0) -- لون برتقالي
-flyButton.Text = "Fly"
-flyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-flyButton.Parent = scriptsFrame
-
--- زر Back في قائمة السكربتات
-local scriptsBackButton = Instance.new("TextButton")
-scriptsBackButton.Size = UDim2.new(0, 50, 0, 30)
-scriptsBackButton.Position = UDim2.new(1, -60, 0, 10)
-scriptsBackButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-scriptsBackButton.Text = "Back"
-scriptsBackButton.Parent = scriptsFrame
 
 -- زر الدعم الفني
 local supportButton = Instance.new("TextButton")
@@ -180,6 +155,7 @@ playerList.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 playerList.Parent = menuFrame
 
 local playerListLayout = Instance.new("UIListLayout")
+playerListLayout.Padding = UDim.new(0, 10) -- المسافة بين الأزرار
 playerListLayout.Parent = playerList
 
 -- زر الرجوع (لإعادة الكاميرا إلى اللاعب الأصلي)
@@ -246,11 +222,6 @@ UserInputService.InputChanged:Connect(function(input)
     end
 end)
 
--- وظيفة الطيران
-local function activateFly()
-    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-end
-
 -- تحديث قائمة اللاعبين
 local function updatePlayerList()
     for _, child in ipairs(playerList:GetChildren()) do
@@ -302,17 +273,7 @@ end)
 
 -- زر السكربتات
 scriptsButton.MouseButton1Click:Connect(function()
-    scriptsFrame.Visible = true
-end)
-
--- زر Fly في قائمة السكربتات
-flyButton.MouseButton1Click:Connect(function()
-    activateFly()
-end)
-
--- زر Back في قائمة السكربتات
-scriptsBackButton.MouseButton1Click:Connect(function()
-    scriptsFrame.Visible = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/amoluff/Amoluffy/refs/heads/main/Allscript.Lua"))()
 end)
 
 -- زر الدعم الفني

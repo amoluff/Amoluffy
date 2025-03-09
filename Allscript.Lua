@@ -4,8 +4,8 @@ screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 -- إنشاء الإطار الرئيسي
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 320, 0, 270) -- زيادة الارتفاع لاستيعاب الزر الجديد
-frame.Position = UDim2.new(0.8, -160, 0.9, -135)
+frame.Size = UDim2.new(0, 210, 0, 270) -- زيادة الارتفاع لاستيعاب الزر الجديد
+frame.Position = UDim2.new(0.7, -160, 0.9, -135)
 frame.AnchorPoint = Vector2.new(0.5, 0.5)
 frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 frame.Parent = screenGui
@@ -47,8 +47,8 @@ end)
 
 -- إنشاء زر الإغلاق (X)
 local closeButton = Instance.new("TextButton")
-closeButton.Size = UDim2.new(0, 30, 0, 30)
-closeButton.Position = UDim2.new(1, -35, 0, 5)
+closeButton.Size = UDim2.new(0, 40, 0, 40)
+closeButton.Position = UDim2.new(1, -50, 0, 5)
 closeButton.Text = "X"
 closeButton.TextColor3 = Color3.new(1, 1, 1)
 closeButton.BackgroundColor3 = Color3.new(0.8, 0.2, 0.2)
@@ -237,4 +237,22 @@ legendButtonCorner.Parent = legendButton
 -- وظيفة تشغيamo luff  النقر على الزر
 legendButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubGunfightArena"))()
+end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "legend of speed 2"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0, 1, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Legends-Of-Speed-Speeeeed-Farm-Open-Source-old-code-lel-1785"))()
 end)

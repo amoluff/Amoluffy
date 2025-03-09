@@ -44,9 +44,9 @@ end)
 
 -- القائمة الرئيسية
 local menuFrame = Instance.new("Frame")
-menuFrame.Size = UDim2.new(0, 250, 0, 350) -- حجم القائمة
+menuFrame.Size = UDim2.new(0, 280, 0, 350) -- حجم القائمة
 menuFrame.Position = UDim2.new(0.5, -125, 0.5, -175) -- موقع القائمة
-menuFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- لون الخلفية
+menuFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- لون الخلفية
 menuFrame.Visible = false
 menuFrame.Parent = screenGui
 
@@ -81,7 +81,7 @@ local closeButton = Instance.new("TextButton")
 closeButton.Size = UDim2.new(0, 50, 0, 30)
 closeButton.Position = UDim2.new(1, -60, 0, 10)
 closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-closeButton.Text = "Back"
+closeButton.Text = "X"
 closeButton.Parent = menuFrame
 
 -- زر السكربتات

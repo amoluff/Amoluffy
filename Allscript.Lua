@@ -184,3 +184,57 @@ legendButtonCorner.Parent = legendButton
 legendButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Bonk-Hub-Cracked-29165"))()
 end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "سكربت  amoluff"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0, 1, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/amoluff/Amoluffy/refs/heads/main/Amoluff.Lua"))();
+end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "brookhaven"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(1, 0, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/sXPiterXs1111/SanderXV2.5/main/SanderXV2.5.lua')))()
+end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "Aimbot"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubGunfightArena"))()
+end)

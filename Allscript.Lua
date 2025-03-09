@@ -4,8 +4,8 @@ screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 -- إنشاء الإطار الرئيسي
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 320, 0, 220) -- حجم الإطار الرئيسي
-frame.Position = UDim2.new(0.5, -160, 0.5, -110)
+frame.Size = UDim2.new(0, 320, 0, 270) -- زيادة الارتفاع لاستيعاب الزر الجديد
+frame.Position = UDim2.new(0.5, -160, 0.5, -135)
 frame.AnchorPoint = Vector2.new(0.5, 0.5)
 frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 frame.Parent = screenGui
@@ -165,4 +165,22 @@ battleButtonCorner.Parent = battleButton
 -- وظيفة تشغيل سكربت Battle Ground عند النقر على الزر
 battleButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-KJ-Moveset-By-Tombul-Oranda-so-its-me-30853"))()
+end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "Legend of Speed"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0.4, 0.8, 1) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيل سكربت Legend of Speed عند النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Bonk-Hub-Cracked-29165"))()
 end)

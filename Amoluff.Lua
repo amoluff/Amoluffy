@@ -101,7 +101,7 @@ end)
 -- زر الإغلاق (Back)
 local closeButton = Instance.new("TextButton")
 closeButton.Size = UDim2.new(0, 50, 0, 30)
-closeButton.Position = UDim2.new(1, -60, 0, 10)
+closeButton.Position = UDim2.new(1, -50, 0, 10)
 closeButton.BackgroundColor3 = Color3.fromRGB(250, 0, 0)
 closeButton.Text = "X"
 closeButton.Parent = menuFrame

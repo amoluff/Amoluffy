@@ -13,7 +13,7 @@ local openButton = Instance.new("TextButton")
 openButton.Size = UDim2.new(0, 50, 0, 50)
 openButton.Position = UDim2.new(0.9, 0, 0.5, 0)
 openButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-openButton.Text = ""
+openButton.Text = "AMOLUFF"
 openButton.Parent = screenGui
 
 -- جعل الزر قابلاً للسحب
@@ -46,7 +46,7 @@ end)
 local menuFrame = Instance.new("Frame")
 menuFrame.Size = UDim2.new(0, 280, 0, 350) -- حجم القائمة
 menuFrame.Position = UDim2.new(0.5, -125, 0.5, -175) -- موقع القائمة
-menuFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- لون الخلفية
+menuFrame.BackgroundColor3 = Color3.fromRGB(60, 60, 60) -- لون الخلفية
 menuFrame.Visible = false
 menuFrame.Parent = screenGui
 
@@ -80,7 +80,7 @@ end)
 local closeButton = Instance.new("TextButton")
 closeButton.Size = UDim2.new(0, 50, 0, 30)
 closeButton.Position = UDim2.new(1, -60, 0, 10)
-closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+closeButton.BackgroundColor3 = Color3.fromRGB(250, 0, 0)
 closeButton.Text = "X"
 closeButton.Parent = menuFrame
 
@@ -151,7 +151,7 @@ supportBackButton.Parent = supportFrame
 local playerList = Instance.new("ScrollingFrame")
 playerList.Size = UDim2.new(1, 0, 1, -40) -- تأكد من أن القائمة تأخذ المساحة المتبقية
 playerList.Position = UDim2.new(0, 0, 0, 40)
-playerList.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+playerList.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 playerList.Parent = menuFrame
 
 local playerListLayout = Instance.new("UIListLayout")
@@ -245,7 +245,7 @@ local function updatePlayerList()
         local spyButton = Instance.new("TextButton")
         spyButton.Size = UDim2.new(0.3, 0, 1, 0)
         spyButton.Position = UDim2.new(0.7, 0, 0, 0)
-        spyButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+        spyButton.BackgroundColor3 = Color3.fromRGB(0, 250, 0)
         spyButton.Text = "التجسس"
         spyButton.Parent = playerFrame
 

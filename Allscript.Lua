@@ -7,7 +7,7 @@ local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 210, 0, 270) -- زيادة الارتفاع لاستيعاب الزر الجديد
 frame.Position = UDim2.new(0.7, -160, 0.9, -135)
 frame.AnchorPoint = Vector2.new(0.5, 0.5)
-frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+frame.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1)
 frame.Parent = screenGui
 
 -- جعل الإطار بشكل Squircle (زوايا مستديرة)
@@ -98,9 +98,9 @@ end)
 -- إنشاء زر REDZ BLOX
 local redzButton = Instance.new("TextButton")
 redzButton.Size = UDim2.new(0, 140, 0, 40)
-redzButton.Text = "REDZ BLOX"
+redzButton.Text = "REDZ BLOX Fruit "
 redzButton.TextColor3 = Color3.new(1, 1, 1)
-redzButton.BackgroundColor3 = Color3.new(1, 0, 0) -- لون أحمر
+redzButton.BackgroundColor3 = Color3.new(0.7, 0, 0) -- لون أحمر
 redzButton.Parent = scrollFrame
 
 -- جعل زر REDZ BLOX بشكل Squircle (زوايا مستديرة)
@@ -116,9 +116,9 @@ end)
 -- إنشاء زر Jump
 local jumpButton = Instance.new("TextButton")
 jumpButton.Size = UDim2.new(0, 140, 0, 40)
-jumpButton.Text = "Jump"
+jumpButton.Text = "Auto Jump"
 jumpButton.TextColor3 = Color3.new(1, 1, 1)
-jumpButton.BackgroundColor3 = Color3.new(0, 0, 1) -- لون أزرق
+jumpButton.BackgroundColor3 = Color3.new(0, 0, 0.7) -- لون أزرق
 jumpButton.Parent = scrollFrame
 
 -- جعل زر Jump بشكل Squircle (زوايا مستديرة)
@@ -134,9 +134,9 @@ end)
 -- إنشاء زر Muscle Legend
 local muscleButton = Instance.new("TextButton")
 muscleButton.Size = UDim2.new(0, 140, 0, 40)
-muscleButton.Text = "Muscle Legend"
+muscleButton.Text = "map Muscle Legend 💪🏻"
 muscleButton.TextColor3 = Color3.new(1, 1, 1)
-muscleButton.BackgroundColor3 = Color3.new(1, 0.5, 0) -- لون برتقالي
+muscleButton.BackgroundColor3 = Color3.new(1, 0.3, 0) -- لون برتقالي
 muscleButton.Parent = scrollFrame
 
 -- جعل زر Muscle Legend بشكل Squircle (زوايا مستديرة)
@@ -152,9 +152,9 @@ end)
 -- إنشاء زر Battle Ground
 local battleButton = Instance.new("TextButton")
 battleButton.Size = UDim2.new(0, 140, 0, 40)
-battleButton.Text = "Battle Ground"
+battleButton.Text = "map Strongth Battle Ground KJ"
 battleButton.TextColor3 = Color3.new(1, 1, 1)
-battleButton.BackgroundColor3 = Color3.new(0.6, 0.4, 0.2) -- لون بني
+battleButton.BackgroundColor3 = Color3.new(0.3, 0.4, 0.2) -- لون بني
 battleButton.Parent = scrollFrame
 
 -- جعل زر Battle Ground بشكل Squircle (زوايا مستديرة)
@@ -170,7 +170,7 @@ end)
 -- إنشاء زر Legend of Speed
 local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
-legendButton.Text = "Legend of Speed"
+legendButton.Text = "map Legend of Speed"
 legendButton.TextColor3 = Color3.new(1, 1, 1)
 legendButton.BackgroundColor3 = Color3.new(0.4, 0.8, 1) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
@@ -189,7 +189,7 @@ end)
 local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
 legendButton.Text = "سكربت عربي AMOLUFF"
-legendButton.TextColor3 = Color3.new(1, 0, 0)
+legendButton.TextColor3 = Color3.new(1, 1, 1)
 legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
 
@@ -206,9 +206,9 @@ end)
 -- إنشاء زر Legend of Speed
 local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
-legendButton.Text = "brookhaven"
+legendButton.Text = "map brookhaven"
 legendButton.TextColor3 = Color3.new(1, 1, 1)
-legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
+legendButton.BackgroundColor3 = Color3.new(0.4, 0.8, 1) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
 
 -- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
@@ -224,7 +224,7 @@ end)
 -- إنشاء زر Legend of Speed
 local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
-legendButton.Text = "Aimbot"
+legendButton.Text = "Aimbot all maps "
 legendButton.TextColor3 = Color3.new(1, 1, 1)
 legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
@@ -244,7 +244,7 @@ local legendButton = Instance.new("TextButton")
 legendButton.Size = UDim2.new(0, 140, 0, 40)
 legendButton.Text = "legend of speed 2"
 legendButton.TextColor3 = Color3.new(1, 1, 1)
-legendButton.BackgroundColor3 = Color3.new(0, 1, 0) -- لون أزرق فاتح
+legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
 legendButton.Parent = scrollFrame
 
 -- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
@@ -255,4 +255,21 @@ legendButtonCorner.Parent = legendButton
 -- وظيفة تشغيamo luff  النقر على الزر
 legendButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Legends-Of-Speed-Speeeeed-Farm-Open-Source-old-code-lel-1785"))()
+end)
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "3 legend of speed  "
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0, 0.6, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHublegendsofspeed"))()
 end)

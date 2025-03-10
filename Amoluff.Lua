@@ -134,7 +134,7 @@ supportFrame.Parent = screenGui
 
 -- نص "الدعم الفني هنا"
 local supportText = Instance.new("TextLabel")
-supportText.Size = UDim2.new(1, 0, 0, 30)
+supportText.Size = UDim2.new(1, 0, 0, 25)
 supportText.Position = UDim2.new(0, 0, 0, 10)
 supportText.BackgroundTransparency = 1
 supportText.Text = "Support 👨🏻‍🔧"
@@ -164,7 +164,7 @@ copyButton.Parent = supportFrame
 -- زر Back في قائمة الدعم الفني
 local supportBackButton = Instance.new("TextButton")
 supportBackButton.Size = UDim2.new(0, 50, 0, 30)
-supportBackButton.Position = UDim2.new(1, -70, 0, 10)
+supportBackButton.Position = UDim2.new(1, -50, 0, 10)
 supportBackButton.BackgroundColor3 = Color3.fromRGB(240, 0, 0)
 supportBackButton.Text = "X"
 supportBackButton.Parent = supportFrame
@@ -265,7 +265,7 @@ local function updatePlayerList()
         playerLabel.Parent = playerFrame
 
         local spyButton = Instance.new("TextButton")
-        spyButton.Size = UDim2.new(0.3, 0.2, 1, 0.2)
+        spyButton.Size = UDim2.new(0.3, 0.2, 1, 0.5)
         spyButton.Position = UDim2.new(0.7, 0, 0, 0)
         spyButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
         spyButton.Text = "👁"

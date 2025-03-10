@@ -134,7 +134,7 @@ supportFrame.Parent = screenGui
 
 -- نص "الدعم الفني هنا"
 local supportText = Instance.new("TextLabel")
-supportText.Size = UDim2.new(1, 0, 0, 25)
+supportText.Size = UDim2.new(1, 0, 0, 20)
 supportText.Position = UDim2.new(0, 0, 0, 10)
 supportText.BackgroundTransparency = 1
 supportText.Text = "Support 👨🏻‍🔧"

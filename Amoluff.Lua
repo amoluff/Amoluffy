@@ -10,11 +10,33 @@ screenGui.Parent = playerGui
 
 -- زر الدائرة الخضراء
 local openButton = Instance.new("TextButton")
-openButton.Size = UDim2.new(0, 50, 0, 50)
+openButton.Size = UDim2.new(0, 60, 0, 60)
 openButton.Position = UDim2.new(0.9, 0, 0.5, 0)
-openButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+openButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- اللون الأبيض
 openButton.Text = "AMOLUFF"
 openButton.Parent = screenGui
+
+-- إضافة حواف دائرية
+local buttonCorner = Instance.new("UICorner")
+buttonCorner.CornerRadius = UDim.new(0.5, 0) -- حواف دائرية
+buttonCorner.Parent = openButton
+
+-- تدرج اللون
+local gradient = Instance.new("UIGradient")
+gradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)), -- الأسود
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 255)), -- الأبيض
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0)) -- الأسود
+}
+gradient.Rotation = 45 -- تدوير التدرج
+gradient.Parent = openButton
+
+-- وظيفة لتغيير تدرج اللون بشكل متكرر
+local colorOffset = 0
+RunService.RenderStepped:Connect(function(deltaTime)
+    colorOffset = (colorOffset + deltaTime * 0.5) % 1 -- سرعة التدرج
+    gradient.Offset = Vector2.new(-colorOffset, -colorOffset) -- تطبيق الإزاحة على التدرج
+end)
 
 -- جعل الزر قابلاً للسحب
 local dragging = false
@@ -88,8 +110,8 @@ closeButton.Parent = menuFrame
 local scriptsButton = Instance.new("TextButton")
 scriptsButton.Size = UDim2.new(0, 100, 0, 30)
 scriptsButton.Position = UDim2.new(1, -170, 0, 10)
-scriptsButton.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
-scriptsButton.Text = "السكربتات"
+scriptsButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+scriptsButton.Text = "Script 📜"
 scriptsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 scriptsButton.Parent = menuFrame
 
@@ -97,8 +119,8 @@ scriptsButton.Parent = menuFrame
 local supportButton = Instance.new("TextButton")
 supportButton.Size = UDim2.new(0, 100, 0, 30)
 supportButton.Position = UDim2.new(1, -280, 0, 10) -- بجانب زر السكربتات
-supportButton.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
-supportButton.Text = "الدعم الفني"
+supportButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+supportButton.Text = "support 🎟"
 supportButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 supportButton.Parent = menuFrame
 
@@ -115,7 +137,7 @@ local supportText = Instance.new("TextLabel")
 supportText.Size = UDim2.new(1, 0, 0, 30)
 supportText.Position = UDim2.new(0, 0, 0, 10)
 supportText.BackgroundTransparency = 1
-supportText.Text = "الدعم الفني هنا"
+supportText.Text = "Support 👨🏻‍🔧"
 supportText.TextColor3 = Color3.fromRGB(255, 255, 255)
 supportText.TextScaled = true
 supportText.Parent = supportFrame
@@ -124,7 +146,7 @@ supportText.Parent = supportFrame
 local supportLink = Instance.new("TextLabel")
 supportLink.Size = UDim2.new(1, 0, 0, 50)
 supportLink.Position = UDim2.new(0, 0, 0, 50)
-supportLink.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+supportLink.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
 supportLink.Text = "https://discord.com/invite/nEaUHGkpX2"
 supportLink.TextColor3 = Color3.fromRGB(255, 255, 255)
 supportLink.TextScaled = true
@@ -134,17 +156,17 @@ supportLink.Parent = supportFrame
 local copyButton = Instance.new("TextButton")
 copyButton.Size = UDim2.new(0, 100, 0, 30)
 copyButton.Position = UDim2.new(0.5, -50, 1, -40)
-copyButton.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
-copyButton.Text = "نسخ الرابط"
+copyButton.BackgroundColor3 = Color3.fromRGB(0 ,0 ,200)
+copyButton.Text = "COPY LINK "
 copyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 copyButton.Parent = supportFrame
 
 -- زر Back في قائمة الدعم الفني
 local supportBackButton = Instance.new("TextButton")
 supportBackButton.Size = UDim2.new(0, 50, 0, 30)
-supportBackButton.Position = UDim2.new(1, -60, 0, 10)
-supportBackButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-supportBackButton.Text = "Back"
+supportBackButton.Position = UDim2.new(1, -70, 0, 10)
+supportBackButton.BackgroundColor3 = Color3.fromRGB(240, 0, 0)
+supportBackButton.Text = "X"
 supportBackButton.Parent = supportFrame
 
 -- قائمة أسماء اللاعبين
@@ -162,8 +184,8 @@ playerListLayout.Parent = playerList
 local returnButton = Instance.new("TextButton")
 returnButton.Size = UDim2.new(0, 120, 0, 40) -- حجم أكبر
 returnButton.Position = UDim2.new(0.5, -60, 1, -50) -- موقع جديد
-returnButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- لون أحمر
-returnButton.Text = "رجوع" -- نص الزر
+returnButton.BackgroundColor3 = Color3.fromRGB(240, 0, 0) -- لون أحمر
+returnButton.Text = "Back" -- نص الزر
 returnButton.TextScaled = true -- تكبير النص
 returnButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- لون النص أبيض
 returnButton.Visible = false -- غير مرئي في البداية
@@ -243,10 +265,10 @@ local function updatePlayerList()
         playerLabel.Parent = playerFrame
 
         local spyButton = Instance.new("TextButton")
-        spyButton.Size = UDim2.new(0.3, 0, 1, 0)
+        spyButton.Size = UDim2.new(0.3, 0.2, 1, 0.2)
         spyButton.Position = UDim2.new(0.7, 0, 0, 0)
-        spyButton.BackgroundColor3 = Color3.fromRGB(0, 250, 0)
-        spyButton.Text = "التجسس"
+        spyButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+        spyButton.Text = "👁"
         spyButton.Parent = playerFrame
 
         -- حواف حادة لزر التجسس

@@ -64,15 +64,21 @@ end)
 
 -- إنشاء ScrollingFrame
 local scrollFrame = Instance.new("ScrollingFrame")
-scrollFrame.Size = UDim2.new(1, -10, 1, -80)
+scrollFrame.Size = UDim2.new(1, -10, 1, -80) -- زيادة المساحة السفلية
 scrollFrame.Position = UDim2.new(0, 5, 0, 40)
 scrollFrame.BackgroundTransparency = 1
 scrollFrame.ScrollBarThickness = 5
 scrollFrame.Parent = frame
 
+-- إنشاء قائمة داخل ScrollingFrame
 local listLayout = Instance.new("UIListLayout")
-listLayout.Padding = UDim.new(0, 5)
+listLayout.Padding = UDim.new(0, 10) -- زيادة المسافة بين الأزرار
 listLayout.Parent = scrollFrame
+
+-- تحديث حجم ScrollingFrame تلقائيًا بناءً على محتواه
+listLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+    scrollFrame.CanvasSize = UDim2.new(0, 0, 0, listLayout.AbsoluteContentSize.Y + 20) -- إضافة مسافة إضافية
+end)
 
 -- إنشاء زر Fly
 local flyButton = Instance.new("TextButton")
@@ -135,7 +141,7 @@ local legendButton1 = Instance.new("TextButton")
 legendButton1.Size = UDim2.new(0, 140, 0, 40)
 legendButton1.Text = "Legend of Speed 1"
 legendButton1.TextColor3 = Color3.new(1, 1, 1)
-legendButton1.BackgroundColor3 = Color3.new(30, 30, 30)
+legendButton1.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
 legendButton1.Parent = scrollFrame
 
 local legendButton1Corner = Instance.new("UICorner")
@@ -151,7 +157,7 @@ local legendButton2 = Instance.new("TextButton")
 legendButton2.Size = UDim2.new(0, 140, 0, 40)
 legendButton2.Text = "legend of speed 2"
 legendButton2.TextColor3 = Color3.new(1, 1, 1)
-legendButton2.BackgroundColor3 = Color3.new(20, 20, 20)
+legendButton2.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 legendButton2.Parent = scrollFrame
 
 local legendButton2Corner = Instance.new("UICorner")
@@ -167,7 +173,7 @@ local legendButton3 = Instance.new("TextButton")
 legendButton3.Size = UDim2.new(0, 140, 0, 40)
 legendButton3.Text = "3 legend of speed  "
 legendButton3.TextColor3 = Color3.new(1, 1, 1)
-legendButton3.BackgroundColor3 = Color3.new(13, 13, 13)
+legendButton3.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 legendButton3.Parent = scrollFrame
 
 local legendButton3Corner = Instance.new("UICorner")
@@ -229,7 +235,7 @@ local brookhavenButton = Instance.new("TextButton")
 brookhavenButton.Size = UDim2.new(0, 140, 0, 40)
 brookhavenButton.Text = "map brookhaven"
 brookhavenButton.TextColor3 = Color3.new(1, 1, 1)
-brookhavenButton.BackgroundColor3 = Color3.new(40, 40, 40)
+brookhavenButton.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
 brookhavenButton.Parent = scrollFrame
 
 local brookhavenButtonCorner = Instance.new("UICorner")
@@ -293,7 +299,7 @@ local battleButton = Instance.new("TextButton")
 battleButton.Size = UDim2.new(0, 140, 0, 40)
 battleButton.Text = "map Strongth Battle Ground KJ"
 battleButton.TextColor3 = Color3.new(1, 1, 1)
-battleButton.BackgroundColor3 = Color3.new(0.3, 0.4, 0)
+battleButton.BackgroundColor3 = Color3.new(0, 0, 0)
 battleButton.Parent = scrollFrame
 
 local battleButtonCorner = Instance.new("UICorner")
@@ -302,4 +308,22 @@ battleButtonCorner.Parent = battleButton
 
 battleButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-KJ-Moveset-By-Tombul-Oranda-so-its-me-30853"))()
+end)
+
+-- إنشاء زر Legend of Speed
+local legendButton = Instance.new("TextButton")
+legendButton.Size = UDim2.new(0, 140, 0, 40)
+legendButton.Text = "ADMIN SCRIPT 📜"
+legendButton.TextColor3 = Color3.new(1, 1, 1)
+legendButton.BackgroundColor3 = Color3.new(0, 0, 0) -- لون أزرق فاتح
+legendButton.Parent = scrollFrame
+
+-- جعل زر Legend of Speed بشكل Squircle (زوايا مستديرة)
+local legendButtonCorner = Instance.new("UICorner")
+legendButtonCorner.CornerRadius = UDim.new(0, 10)
+legendButtonCorner.Parent = legendButton
+
+-- وظيفة تشغيamo luff  النقر على الزر
+legendButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
 end)

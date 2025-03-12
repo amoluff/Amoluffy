@@ -140,7 +140,7 @@ legendHeaderCorner.Parent = legendHeader
 local legendButton1 = Instance.new("TextButton")
 legendButton1.Size = UDim2.new(0, 140, 0, 40)
 legendButton1.Text = "Legend of Speed 1"
-legendButton1.TextColor3 = Color3.new(1, 1, 1)
+legendButton1.TextColor3 = Color3.new(0, 0, 0) -- لون النص أسود
 legendButton1.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
 legendButton1.Parent = scrollFrame
 
@@ -156,7 +156,7 @@ end)
 local legendButton2 = Instance.new("TextButton")
 legendButton2.Size = UDim2.new(0, 140, 0, 40)
 legendButton2.Text = "legend of speed 2"
-legendButton2.TextColor3 = Color3.new(1, 1, 1)
+legendButton2.TextColor3 = Color3.new(0, 0, 0) -- لون النص أسود
 legendButton2.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
 legendButton2.Parent = scrollFrame
 
@@ -172,7 +172,7 @@ end)
 local legendButton3 = Instance.new("TextButton")
 legendButton3.Size = UDim2.new(0, 140, 0, 40)
 legendButton3.Text = "3 legend of speed  "
-legendButton3.TextColor3 = Color3.new(1, 1, 1)
+legendButton3.TextColor3 = Color3.new(0, 0, 0) -- لون النص أسود
 legendButton3.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
 legendButton3.Parent = scrollFrame
 
@@ -323,7 +323,7 @@ local legendButtonCorner = Instance.new("UICorner")
 legendButtonCorner.CornerRadius = UDim.new(0, 10)
 legendButtonCorner.Parent = legendButton
 
--- وظيفة تشغيamo luff  النقر على الزر
+-- وظيفة تشغيل النقر على الزر
 legendButton.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))();
 end)
